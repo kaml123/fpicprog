@@ -42,7 +42,7 @@ Then build fpicprog. Note that if clang++ is installed, the COMPILER=gcc can
 be left out to build with clang++ instead of g++.
 
 ```bash
-git clone --recurse-submodules https://github.com/gphalkes/fpicprog
+git clone --recurse-submodules https://github.com/kaml123/fpicprog
 make -C fpicprog/src COMPILER=gcc
 ```
 
