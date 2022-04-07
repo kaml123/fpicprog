@@ -31,8 +31,8 @@ chip_erase_sequence = 4064h
 [24F08KA101]
 device_id = 0D08h
 program_memory_size = 2816
-eeprom_memory_size = 256
-eeprom_memory_offset = 7FFE00h
+eeprom_size = 256
+eeprom_address = 7FFE00h
 config_size = 9
 config_address = F80000h
 missing_locations = F80002h
@@ -45,8 +45,8 @@ chip_erase_sequence = 4064h 4050h
 [24F16KA101]
 device_id = 0D01h
 program_memory_size = 5632
-eeprom_memory_size = 256
-eeprom_memory_offset = 7FFE00h
+eeprom_size = 256
+eeprom_address = 7FFE00h
 config_size = 9
 config_address = F80000h
 missing_locations = F80002h
@@ -59,8 +59,8 @@ chip_erase_sequence = 4064h 4050h
 [24F08KA102]
 device_id = 0D0Ah
 program_memory_size = 2816
-eeprom_memory_size = 256
-eeprom_memory_offset = 7FFE00h
+eeprom_size = 256
+eeprom_address = 7FFE00h
 config_size = 9
 config_address = F80000h
 missing_locations = F80002h
@@ -73,8 +73,8 @@ chip_erase_sequence = 4064h 4050h
 [24F16KA102]
 device_id = 0D03h
 program_memory_size = 5632
-eeprom_memory_size = 256
-eeprom_memory_offset = 7FFE00h
+eeprom_size = 256
+eeprom_address = 7FFE00h
 config_size = 9
 config_address = F80000h
 missing_locations = F80002h
@@ -83,4 +83,18 @@ block_write_sequence = 4004h
 eeprom_write_sequence = 4004h
 config_write_sequence = 4004h
 chip_erase_sequence = 4064h 4050h
+
+[24FJ64GB002]
+device_id = 4207h
+program_memory_size = 22528
+eeprom_size = 256
+eeprom_address = 7FFE00h
+config_size = 9
+config_address = F80000h
+missing_locations = F80002h
+write_block_size = 32
+block_write_sequence = 4004h
+eeprom_write_sequence = 4004h
+config_write_sequence = 4004h
+chip_erase_sequence = 404Fh
 
