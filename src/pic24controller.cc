@@ -209,7 +209,7 @@ Status Pic24Controller::ChipErase(const DeviceInfo &device_info) {
 }
 
 Status Pic24Controller::SectionErase(Section, const DeviceInfo &) {
-  return Status(UNIMPLEMENTED, "Erasing the device has not been implmeneted yet.");
+  return Status(UNIMPLEMENTED, "Erasing the device has not been implemented yet.");
 }
 
 Status Pic24Controller::WriteCommand(uint32_t payload) {
@@ -255,7 +255,11 @@ Status Pic24Controller::ExecuteErase(uint32_t nvmcon) {
   RETURN_IF_ERROR(WriteCommand(0x20000A | (nvmcon << 4)));
   // MOV W10, NVMCON
   RETURN_IF_ERROR(WriteCommand(0x883B0A));
-  RETURN_IF_ERROR(LoadAddress(0x00800000));
+  if (nvmcon == 0x404F) {
+    RETURN_IF_ERROR(LoadAddress(0x00000000));
+  } else {
+    RETURN_IF_ERROR(LoadAddress(0x00800000));
+  }
   // TBLWTL W0, [W0]
   RETURN_IF_ERROR(WriteCommand(0xBB0800));
   RETURN_IF_ERROR(WriteCommand(NOP));

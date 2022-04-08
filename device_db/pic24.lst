@@ -86,15 +86,49 @@ chip_erase_sequence = 4064h 4050h
 
 [24FJ64GB002]
 device_id = 4207h
-program_memory_size = 22528
-eeprom_size = 256
-eeprom_address = 7FFE00h
-config_size = 9
-config_address = F80000h
-missing_locations = F80002h
-write_block_size = 32
-block_write_sequence = 4004h
-eeprom_write_sequence = 4004h
-config_write_sequence = 4004h
+program_memory_size = 22016
+config_size = 8
+config_address = ABF0h
+write_block_size = 64
+block_write_sequence = 4001h
+config_write_sequence = 4001h
 chip_erase_sequence = 404Fh
+#calibration_word_address = 800880h
+#calibration_word_size = 8
+
+[24FJ64GB004]
+device_id = 420Fh
+program_memory_size = 22016
+config_size = 4
+config_address = ABF8h
+write_block_size = 64
+block_write_sequence = 4001h
+config_write_sequence = 4001h
+chip_erase_sequence = 404Fh
+#calibration_word_address = 800880h
+#calibration_word_size = 8
+
+[24FJ32GB002]
+device_id = 4203h
+program_memory_size = 11008
+config_size = 4
+config_address = 57F8h
+write_block_size = 64
+block_write_sequence = 4001h
+config_write_sequence = 4001h
+chip_erase_sequence = 404Fh
+#calibration_word_address = 800880h
+#calibration_word_size = 8
+
+[24FJ32GB004]
+device_id = 420Bh
+program_memory_size = 11008
+config_size = 4
+config_address = 57F8h
+write_block_size = 64
+block_write_sequence = 4001h
+config_write_sequence = 4001h
+chip_erase_sequence = 404Fh
+#calibration_word_address = 800880h
+#calibration_word_size = 8
 
